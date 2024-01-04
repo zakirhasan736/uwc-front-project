@@ -40,7 +40,12 @@ const PersonalDetailsPage = () => {
       <h1 className='auth-screen-title'>Enter Personal Details</h1>
       <form className='screens-form-main-box mt-[65px]'>
         <div className='input-gragdrop-field-group'>
-          <label htmlFor=''>Profile picture</label>
+          <label
+            htmlFor=''
+            className='mb-3 block capitalize text-body-text text-left font-primary font-medium leading-none text-primary-color'
+          >
+            Profile picture
+          </label>
           <DropzoneComponent onChange={handleInputChange} />
         </div>
         <AccendInput

@@ -10,7 +10,7 @@ export default function AuthenticationLayout({ children }) {
     <section className="auth-page-section-wrapper  min-h-[100vh] h-full">
       <div className="custom-container">
         <div className="auth-page-wrapper-main pt-[73px] pb-[90px]">
-          <div className="auth-page-brad-logo-box flex items-center justify-center"><Link href="/" ><Image src="/images/icons/auth-page-brand-logo.svg" alt="brand logo image" width={204} height={46} /></Link></div>
+          <div className="auth-page-brad-logo-box flex items-center justify-center"><Link href="/authentication" ><Image src="/images/icons/auth-page-brand-logo.svg" alt="brand logo image" width={204} height={46} /></Link></div>
           {children}
         </div>
       </div>

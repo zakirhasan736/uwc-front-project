@@ -6,21 +6,21 @@ const DropDownSelectItem = ({
   heightClass = '',
   dropDownLabel = '',
   onChange,
-  options = [],
+  options = []
 }) => {
   const [selectedItem, setSelectedItem] = useState({
     text: '',
-    statusIcon: '',
+    statusIcon: ''
   })
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const dropdownRef = useRef(null)
 
-  const handleSelect = (option) => {
+  const handleSelect = option => {
     const data = {
       target: {
         name: 'country',
-        value: option.text,
-      },
+        value: option.text
+      }
     }
     onChange(data)
     setSelectedItem(option)
@@ -32,7 +32,7 @@ const DropDownSelectItem = ({
   }
 
   useEffect(() => {
-    const handleOutsideClick = (event) => {
+    const handleOutsideClick = event => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsDropdownOpen(false)
       }
@@ -110,6 +110,7 @@ const DropDownSelectItem = ({
         <div className='options-dropdown-screen absolute left-0 top-[77px]  z-50 w-full rounded-[10px] border border-[#EDEDED] bg-[#F6F6F6] py-5'>
           <ul>
             {options.map((item, index) => (
+              // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
               <li
                 className={`options-dropdown-items px-4 py-2 font-primary text-body-text font-normal ${
                   item === selectedItem ? 'selected' : ''

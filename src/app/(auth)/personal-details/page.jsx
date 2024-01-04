@@ -17,11 +17,9 @@ const PersonalDetailsPage = () => {
   const dispatch = useDispatch()
   const router = useRouter()
 
-  const { submitted, ...formData } = useSelector(
-    (state) => state.personalDetails
-  )
+  const { submitted, ...formData } = useSelector(state => state.personalDetails)
 
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     const { name, value } = e.target
     dispatch(updateFormData({ name, value }))
   }
@@ -40,7 +38,7 @@ const PersonalDetailsPage = () => {
       <h1 className='auth-screen-title'>Enter Personal Details</h1>
       <form className='screens-form-main-box mt-[65px]'>
         <div className='input-gragdrop-field-group'>
-          <label htmlFor=''>Profile picture</label>
+          <label htmlFor='a'>Profile picture</label>
           <DropzoneComponent onChange={handleInputChange} />
         </div>
         <AccendInput

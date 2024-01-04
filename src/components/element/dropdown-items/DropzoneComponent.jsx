@@ -5,7 +5,7 @@ import { useDropzone } from 'react-dropzone'
 const DropzoneComponent = ({ onChange }) => {
   const [droppedImage, setDroppedImage] = useState(null)
 
-  const onDrop = (acceptedFiles) => {
+  const onDrop = acceptedFiles => {
     // Ensure only one file is accepted
     if (acceptedFiles.length > 1) {
       alert('Please drop only one file.')
@@ -22,8 +22,8 @@ const DropzoneComponent = ({ onChange }) => {
     const data = {
       target: {
         name: 'profilePhoto',
-        value: preview,
-      },
+        value: preview
+      }
     }
     onChange(data)
   }

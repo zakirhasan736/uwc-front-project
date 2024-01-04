@@ -12,9 +12,9 @@ const ForgotPasswordPage = () => {
   const dispatch = useDispatch()
   const router = useRouter()
 
-  const { submitted, ...formData } = useSelector((state) => state.resetPassword)
+  const { submitted, ...formData } = useSelector(state => state.resetPassword)
 
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     const { name, value } = e.target
     dispatch(updateFormData({ name, value }))
   }

@@ -12,11 +12,11 @@ const SignInPage = () => {
   const dispatch = useDispatch()
   const router = useRouter()
 
-  const signin = useSelector((state) => state.signin)
+  const signin = useSelector(state => state.signin)
 
-  const personalDetails = useSelector((state) => state.personalDetails)
+  const personalDetails = useSelector(state => state.personalDetails)
 
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     const { name, value } = e.target
     dispatch(updateFormData({ name, value }))
   }

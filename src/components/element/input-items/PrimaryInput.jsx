@@ -11,10 +11,10 @@ const PrimaryInput = ({
   inputClasses = '',
   onChange,
   name,
-  getInputIcon = '', // Pass the function for determining the icon
+  getInputIcon = '' // Pass the function for determining the icon
 }) => {
   const [showPassword, setShowPassword] = useState(false)
-  const togglePasswordVisibility = () => setShowPassword((prev) => !prev)
+  const togglePasswordVisibility = () => setShowPassword(prev => !prev)
 
   return (
     <div className={`form-input-group ${inputClasses}`}>

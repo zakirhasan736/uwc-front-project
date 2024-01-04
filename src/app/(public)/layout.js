@@ -1,6 +1,5 @@
-import Footer from "@/components/common/Footer/Footer"
-import Header from "@/components/common/Header/Header"
-
+import Footer from '@/components/common/Footer/Footer'
+import Header from '@/components/common/Header/Header'
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,7 +9,7 @@ export const metadata = {
 export default function PublicLayout({ children }) {
   return (
     <>
-    <Header />
+      <Header />
       {children}
       <Footer />
     </>

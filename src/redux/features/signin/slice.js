@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   email: '',
   password: '',
-  submitted: false
+  submitted: false,
 }
 
 export const signinSlice = createSlice({
@@ -18,8 +18,8 @@ export const signinSlice = createSlice({
 
       state.submitted = allFieldsEmpty
     },
-    clearFormData: state => ({ ...initialState })
-  }
+    clearFormData: (state) => ({ ...initialState }),
+  },
 })
 
 export const { updateFormData, clearFormData } = signinSlice.actions

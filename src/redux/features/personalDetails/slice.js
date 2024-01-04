@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   profilePhoto: '',
@@ -7,16 +7,16 @@ const initialState = {
   role: '',
   phoneNumber: '',
   address: '',
-  submitted: false
-};
+  submitted: false,
+}
 
 export const personalDetailsSlice = createSlice({
   name: 'personalDetails',
   initialState,
   reducers: {
     updateFormData: (state, action) => {
-      const { name, value } = action.payload;
-      state[name] = value;
+      const { name, value } = action.payload
+      state[name] = value
       const allFieldsEmpty =
         state.profilePhoto === '' ||
         state.fullName === '' ||
@@ -25,14 +25,14 @@ export const personalDetailsSlice = createSlice({
         state.phoneNumber === '' ||
         state.address === ''
           ? false
-          : true;
+          : true
 
-      state.submitted = allFieldsEmpty;
+      state.submitted = allFieldsEmpty
     },
-    clearFormData: state => ({ ...initialState })
-  }
-});
+    clearFormData: (state) => ({ ...initialState }),
+  },
+})
 
-export const { updateFormData, clearFormData } = personalDetailsSlice.actions;
+export const { updateFormData, clearFormData } = personalDetailsSlice.actions
 
-export default personalDetailsSlice.reducer;
+export default personalDetailsSlice.reducer

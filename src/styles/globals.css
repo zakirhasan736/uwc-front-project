@@ -20,7 +20,7 @@
 
   body {
     color: #272727;
-    background: #F9F9F9;
+    background: #f9f9f9;
   }
 
   html,
@@ -55,29 +55,29 @@
     text-decoration: none;
     list-style: none;
   }
-  .box-shadow{
-    box-shadow: -6px 1px 73.3px 0px rgba(0, 0, 0, 0.06);;
+  .box-shadow {
+    box-shadow: -6px 1px 73.3px 0px rgba(0, 0, 0, 0.06);
   }
-  .form-input-group:not(:first-child){
+  .form-input-group:not(:first-child) {
     margin-top: 35px;
   }
-  li.options-dropdown-items.selected{
+  li.options-dropdown-items.selected {
     background: #fff;
   }
 }
 
 @layer components {
-  .custom-container-fluid { 
-    @apply max-w-[1280px] w-full mx-auto px-[30px] sm:px-0;
+  .custom-container-fluid {
+    @apply mx-auto w-full max-w-[1280px] px-[30px] sm:px-0;
   }
 
   .custom-container {
     @apply container laptop-x:container laptop-m:container lg:container md:container sm:container xs:container xxs:container lg:px-[30px] sm:px-4 xxs:px-4;
   }
-  .auth-screen-title{
-    @apply  text-center text-primary-color text-primary-heading font-secondary font-bold leading-none;
+  .auth-screen-title {
+    @apply text-center font-secondary text-primary-heading font-bold leading-none text-primary-color;
   }
-  .auth-screen-desc{
-    @apply  text-center text-secondary-color mt-[10px] text-body-text font-primary font-normal leading-[21px];
+  .auth-screen-desc {
+    @apply mt-[10px] text-center font-primary text-body-text font-normal leading-[21px] text-secondary-color;
   }
 }

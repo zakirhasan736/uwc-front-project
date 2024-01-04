@@ -11,22 +11,25 @@
   "rules": {
     "array-callback-return": "warn",
     "arrow-body-style": ["error", "as-needed"],
-    "camelcase": ["error", {"properties": "always"}],
+    "camelcase": ["error", { "properties": "always" }],
     "eol-last": ["error", "always"],
     "eqeqeq": ["error", "always"],
     "import/no-extraneous-dependencies": "error",
     "indent": ["error", 2],
     "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
-    "max-len": ["warn", {
-      "code": 120,
-      "tabWidth": 4,
-      "comments": 120,
-      "ignoreTrailingComments": true,
-      "ignoreUrls": true,
-      "ignoreStrings": true,
-      "ignoreTemplateLiterals": true,
-      "ignoreRegExpLiterals": true
-    }],
+    "max-len": [
+      "warn",
+      {
+        "code": 120,
+        "tabWidth": 4,
+        "comments": 120,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
     "no-console": "warn",
     "no-multiple-empty-lines": ["error", { "max": 1 }],
     "no-shadow": "warn",
@@ -37,7 +40,10 @@
     "object-curly-spacing": ["error", "always"],
     "prefer-arrow-callback": "error",
     "prefer-const": "error",
-    "prettier/prettier": ["error", { "endOfLine": "auto", "semi": false, "singleQuote": true }],
+    "prettier/prettier": [
+      "error",
+      { "endOfLine": "auto", "semi": false, "singleQuote": true }
+    ],
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "semi": ["error", "never"]

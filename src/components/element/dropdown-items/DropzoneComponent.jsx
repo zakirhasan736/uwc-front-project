@@ -1,34 +1,34 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { useDropzone } from 'react-dropzone';
+import React, { useState } from 'react'
+import Image from 'next/image'
+import { useDropzone } from 'react-dropzone'
 
 const DropzoneComponent = ({ onChange }) => {
-  const [droppedImage, setDroppedImage] = useState(null);
+  const [droppedImage, setDroppedImage] = useState(null)
 
   const onDrop = acceptedFiles => {
     // Ensure only one file is accepted
     if (acceptedFiles.length > 1) {
-      alert('Please drop only one file.');
-      return;
+      alert('Please drop only one file.')
+      return
     }
     // Ensure file type is jpg or png
-    const file = acceptedFiles[0];
+    const file = acceptedFiles[0]
     if (file.type !== 'image/jpeg' && file.type !== 'image/png') {
-      alert('Please drop a JPG or PNG file.');
-      return;
+      alert('Please drop a JPG or PNG file.')
+      return
     }
-    const preview = URL.createObjectURL(file);
-    setDroppedImage(preview);
+    const preview = URL.createObjectURL(file)
+    setDroppedImage(preview)
     const data = {
       target: {
         name: 'profilePhoto',
         value: preview
       }
-    };
-    onChange(data);
-  };
+    }
+    onChange(data)
+  }
 
-  const { getRootProps, getInputProps } = useDropzone({ onDrop });
+  const { getRootProps, getInputProps } = useDropzone({ onDrop })
 
   return (
     <div {...getRootProps()}>
@@ -51,7 +51,7 @@ const DropzoneComponent = ({ onChange }) => {
         />
       )}
     </div>
-  );
-};
+  )
+}
 
-export default DropzoneComponent;
+export default DropzoneComponent

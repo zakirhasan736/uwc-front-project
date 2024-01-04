@@ -4,7 +4,7 @@ const initialState = {
   email: '',
   newPassword: '',
   confirmPassword: '',
-  submitted: false
+  submitted: false,
 }
 
 export const resetPasswordSlice = createSlice({
@@ -15,12 +15,16 @@ export const resetPasswordSlice = createSlice({
       const { name, value } = action.payload
       state[name] = value
       const allFieldsEmpty =
-        state.email === '' || state.newPassword === '' || state.confirmPassword === '' ? false : true
+        state.email === '' ||
+        state.newPassword === '' ||
+        state.confirmPassword === ''
+          ? false
+          : true
 
       state.submitted = allFieldsEmpty
     },
-    clearFormData: state => ({ ...initialState })
-  }
+    clearFormData: (state) => ({ ...initialState }),
+  },
 })
 
 export const { updateFormData, clearFormData } = resetPasswordSlice.actions

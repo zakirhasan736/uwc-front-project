@@ -1,11 +1,7 @@
 import React from 'react'
 
 const InputCheckMark = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <div></div>
 }
 
 export default InputCheckMark

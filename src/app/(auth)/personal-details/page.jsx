@@ -1,42 +1,42 @@
-'use client';
+'use client'
 
-import React from 'react';
-import PrimaryButton from '@/components/element/button-items/PrimaryButton';
-import PrimaryInput from '@/components/element/input-items/PrimaryInput';
-import AccendInput from '@/components/element/input-items/AccendInput';
-import TextAreaInputField from '@/components/element/input-items/TextAreaInputField';
-import DropDownSelectItem from '@/components/element/dropdown-items/DropdownSelectItem';
-import DropzoneComponent from '@/components/element/dropdown-items/DropzoneComponent';
-import { updateFormData } from '@/redux/features/personalDetails/slice';
-import { useDispatch, useSelector } from 'react-redux';
-import { useRouter } from 'next/navigation';
+import React from 'react'
+import PrimaryButton from '@/components/element/button-items/PrimaryButton'
+import PrimaryInput from '@/components/element/input-items/PrimaryInput'
+import AccendInput from '@/components/element/input-items/AccendInput'
+import TextAreaInputField from '@/components/element/input-items/TextAreaInputField'
+import DropDownSelectItem from '@/components/element/dropdown-items/DropdownSelectItem'
+import DropzoneComponent from '@/components/element/dropdown-items/DropzoneComponent'
+import { updateFormData } from '@/redux/features/personalDetails/slice'
+import { useDispatch, useSelector } from 'react-redux'
+import { useRouter } from 'next/navigation'
 
 const PersonalDetailsPage = () => {
-  const cuntryOption = [{ text: 'UK' }, { text: 'US' }, { text: 'FR' }];
+  const cuntryOption = [{ text: 'UK' }, { text: 'US' }, { text: 'FR' }]
 
-  const dispatch = useDispatch();
-  const router = useRouter();
+  const dispatch = useDispatch()
+  const router = useRouter()
 
   const { submitted, ...formData } = useSelector(
-    state => state.personalDetails
-  );
+    (state) => state.personalDetails
+  )
 
-  const handleInputChange = e => {
-    const { name, value } = e.target;
-    dispatch(updateFormData({ name, value }));
-  };
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    dispatch(updateFormData({ name, value }))
+  }
 
   const handleSubmit = () => {
     if (submitted) {
-          // before check all data is valid by backend api
-      router.push('/update-success');
+      // before check all data is valid by backend api
+      router.push('/update-success')
     } else {
-      return;
+      return
     }
-  };
+  }
 
   return (
-    <div className='auth-form-screen box-shadow max-w-[537px]  mx-auto mt-[58px] bg-uwc-white px-[38px] pt-9 pb-10 rounded-[15px] border border-accend-color-4'>
+    <div className='auth-form-screen box-shadow mx-auto  mt-[58px] max-w-[537px] rounded-[15px] border border-accend-color-4 bg-uwc-white px-[38px] pb-10 pt-9'>
       <h1 className='auth-screen-title'>Enter Personal Details</h1>
       <form className='screens-form-main-box mt-[65px]'>
         <div className='input-gragdrop-field-group'>
@@ -88,7 +88,7 @@ const PersonalDetailsPage = () => {
         />
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default PersonalDetailsPage;
+export default PersonalDetailsPage

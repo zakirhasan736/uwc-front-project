@@ -1,4 +1,4 @@
-import { Link, Image } from "@utils/packages"
+import { Link, Image } from '@utils/packages'
 
 export const metadata = {
   title: 'Authentications',
@@ -7,10 +7,19 @@ export const metadata = {
 
 export default function AuthenticationLayout({ children }) {
   return (
-    <section className="auth-page-section-wrapper  min-h-[100vh] h-full">
+    <section className="auth-page-section-wrapper  h-full min-h-[100vh]">
       <div className="custom-container">
-        <div className="auth-page-wrapper-main pt-[73px] pb-[90px]">
-          <div className="auth-page-brad-logo-box flex items-center justify-center"><Link href="/" ><Image src="/images/icons/auth-page-brand-logo.svg" alt="brand logo image" width={204} height={46} /></Link></div>
+        <div className="auth-page-wrapper-main pb-[90px] pt-[73px]">
+          <div className="auth-page-brad-logo-box flex items-center justify-center">
+            <Link href="/">
+              <Image
+                src="/images/icons/auth-page-brand-logo.svg"
+                alt="brand logo image"
+                width={204}
+                height={46}
+              />
+            </Link>
+          </div>
           {children}
         </div>
       </div>

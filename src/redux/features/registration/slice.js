@@ -4,7 +4,7 @@ const initialState = {
   email: '',
   password: '',
   confirmPassword: '',
-  submitted: false
+  submitted: false,
 }
 
 export const registrationSlice = createSlice({
@@ -23,8 +23,8 @@ export const registrationSlice = createSlice({
 
       state.submitted = allFieldsEmpty
     },
-    clearFormData: state => ({ ...initialState })
-  }
+    clearFormData: (state) => ({ ...initialState }),
+  },
 })
 
 export const { updateFormData, clearFormData } = registrationSlice.actions

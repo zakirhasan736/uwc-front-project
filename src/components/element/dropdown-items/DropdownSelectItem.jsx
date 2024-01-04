@@ -1,60 +1,60 @@
-'use client';
-import React, { useState, useEffect, useRef } from 'react';
+'use client'
+import React, { useState, useEffect, useRef } from 'react'
 
 const DropDownSelectItem = ({
   DrpPlaceholder,
   heightClass = '',
   dropDownLabel = '',
   onChange,
-  options = []
+  options = [],
 }) => {
   const [selectedItem, setSelectedItem] = useState({
     text: '',
-    statusIcon: ''
-  });
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+    statusIcon: '',
+  })
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const dropdownRef = useRef(null)
 
-  const handleSelect = option => {
+  const handleSelect = (option) => {
     const data = {
-        target: {
+      target: {
         name: 'country',
-        value: option.text
-      }
-    };
-    onChange(data);
-    setSelectedItem(option);
-    setIsDropdownOpen(false);
-  };
+        value: option.text,
+      },
+    }
+    onChange(data)
+    setSelectedItem(option)
+    setIsDropdownOpen(false)
+  }
 
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+    setIsDropdownOpen(!isDropdownOpen)
+  }
 
   useEffect(() => {
-    const handleOutsideClick = event => {
+    const handleOutsideClick = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
+        setIsDropdownOpen(false)
       }
-    };
+    }
 
     if (isDropdownOpen) {
-      window.addEventListener('mousedown', handleOutsideClick);
+      window.addEventListener('mousedown', handleOutsideClick)
     }
 
     return () => {
-      window.removeEventListener('mousedown', handleOutsideClick);
-    };
-  }, [isDropdownOpen]);
+      window.removeEventListener('mousedown', handleOutsideClick)
+    }
+  }, [isDropdownOpen])
 
   return (
     <div className='dropdown-select-item-with-icon relative' ref={dropdownRef}>
       <div className={`selected-item ${heightClass}`} onClick={toggleDropdown}>
-        <h6 className='dropdown-label-title mb-3 block capitalize text-body-text text-left font-primary font-medium leading-none text-primary-color'>
+        <h6 className='dropdown-label-title mb-3 block text-left font-primary text-body-text font-medium capitalize leading-none text-primary-color'>
           {dropDownLabel}
         </h6>
         <div
-          className={`select-items-wrap  flex items-center justify-between  h-[45px] px-[22px] bg-[#F6F6F6] w-full border border-[#EDEDED] rounded-[10px] text-body-text text-left font-primary font-normal leading-none text-primary-color placeholder:text-accend-color-2 placeholder:font-primary placeholder:text-body-text py-4 ${
+          className={`select-items-wrap  flex h-[45px] w-full  items-center justify-between rounded-[10px] border border-[#EDEDED] bg-[#F6F6F6] px-[22px] py-4 text-left font-primary text-body-text font-normal leading-none text-primary-color placeholder:font-primary placeholder:text-body-text placeholder:text-accend-color-2 ${
             isDropdownOpen ? 'active-open' : ''
           }`}
         >
@@ -107,11 +107,11 @@ const DropDownSelectItem = ({
         </div>
       </div>
       {isDropdownOpen && options.length > 0 && (
-        <div className='options-dropdown-screen absolute left-0 top-[77px]  bg-[#F6F6F6] z-50 border border-[#EDEDED] rounded-[10px] w-full py-5'>
+        <div className='options-dropdown-screen absolute left-0 top-[77px]  z-50 w-full rounded-[10px] border border-[#EDEDED] bg-[#F6F6F6] py-5'>
           <ul>
             {options.map((item, index) => (
               <li
-                className={`options-dropdown-items text-body-text font-normal font-primary py-2 px-4 ${
+                className={`options-dropdown-items px-4 py-2 font-primary text-body-text font-normal ${
                   item === selectedItem ? 'selected' : ''
                 }`}
                 key={index}
@@ -127,7 +127,7 @@ const DropDownSelectItem = ({
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default DropDownSelectItem;
+export default DropDownSelectItem

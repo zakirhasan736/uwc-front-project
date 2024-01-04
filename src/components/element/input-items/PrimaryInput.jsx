@@ -9,6 +9,8 @@ const PrimaryInput = ({
   iconWidth = '',
   iconHeight = '',
   inputClasses = '',
+  onChange,
+  name,
   getInputIcon = '' // Pass the function for determining the icon
 }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -39,6 +41,8 @@ const PrimaryInput = ({
           type={showPassword ? 'text' : inputType}
           className='form-input-field h-[45px] px-[49px] bg-[#F6F6F6] w-full border border-[#EDEDED] rounded-[10px] text-body-text text-left font-primary font-normal leading-none text-primary-color placeholder:text-accend-color-2 placeholder:font-primary placeholder:text-body-text py-4'
           placeholder={placeholder}
+          onChange={onChange}
+          name={name}
         />
         {inputType === 'password' && (
           <button

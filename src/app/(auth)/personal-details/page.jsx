@@ -39,7 +39,7 @@ const PersonalDetailsPage = () => {
       <form className='screens-form-main-box mt-[65px]'>
         <div className='input-gragdrop-field-group'>
 
-          <label htmlFor='a'>Profile picture</label>
+          <label htmlFor='a' className='mb-3 block text-left font-primary text-body-text font-medium capitalize leading-none text-primary-color'>Profile picture</label>
 
           <DropzoneComponent onChange={handleInputChange} />
         </div>

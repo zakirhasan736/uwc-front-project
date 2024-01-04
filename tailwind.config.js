@@ -50,11 +50,12 @@ module.exports = {
     extend: {
       colors: {
         'primary-color': '#272727',
-        'secondary-color': '#0064A6',
-        'accend-color': '#858585',
-        'accend-color-2': '#009692',
-        'accend-color-3': '#EBEBEB',
-        'neu-white': '#fff',
+        'secondary-color': '#626262',
+        'accend-color': '#0064A6',
+        'accend-color-2': '#858585',
+        'accend-color-3': '#009692',
+        'accend-color-4': '#EBEBEB',
+        'uwc-white': '#fff',
         'uwc-body': '#F9F9F9',
       },
       backgroundImage: {

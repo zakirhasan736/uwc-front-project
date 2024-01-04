@@ -40,11 +40,22 @@ module.exports = {
         accent: ['Manrope', 'sans-serif']
     },
     fontSize: {
-
+      'primary-heading': '30px',
+      'secondary-heading': '26px',
+      'accend-heading': '22px',
+      'body-text': '16px',
+      'body-secondary-text': '18px',
+      'accend-text': '14px',
     },
     extend: {
       colors: {
-        
+        'primary-color': '#272727',
+        'secondary-color': '#0064A6',
+        'accend-color': '#858585',
+        'accend-color-2': '#009692',
+        'accend-color-3': '#EBEBEB',
+        'neu-white': '#fff',
+        'uwc-body': '#F9F9F9',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -7,6 +7,7 @@ export const metadata = {
 
 export default function AuthenticationLayout({ children }) {
   return (
+
     <section className='auth-page-section-wrapper  h-full min-h-[100vh]'>
       <div className='custom-container'>
         <div className='auth-page-wrapper-main pb-[90px] pt-[73px]'>
@@ -20,6 +21,7 @@ export default function AuthenticationLayout({ children }) {
               />
             </Link>
           </div>
+
           {children}
         </div>
       </div>

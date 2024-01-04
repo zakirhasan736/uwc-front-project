@@ -1,0 +1,50 @@
+{
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react", "react-hooks", "jsx-a11y", "prettier"],
+  "rules": {
+    "array-callback-return": "warn",
+    "arrow-body-style": ["error", "as-needed"],
+    "camelcase": ["error", {"properties": "always"}],
+    "eol-last": ["error", "always"],
+    "eqeqeq": ["error", "always"],
+    "import/no-extraneous-dependencies": "error",
+    "indent": ["error", 2],
+    "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
+    "max-len": ["warn", {
+      "code": 120,
+      "tabWidth": 4,
+      "comments": 120,
+      "ignoreTrailingComments": true,
+      "ignoreUrls": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreRegExpLiterals": true
+    }],
+    "no-console": "warn",
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "no-shadow": "warn",
+    "no-trailing-spaces": "error",
+    "no-undef": "error",
+    "no-unused-vars": "warn",
+    "no-var": "error",
+    "object-curly-spacing": ["error", "always"],
+    "prefer-arrow-callback": "error",
+    "prefer-const": "error",
+    "prettier/prettier": ["error", { "endOfLine": "auto", "semi": false, "singleQuote": true }],
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "semi": ["error", "never"]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import { Onest, Manrope } from 'next/font/google'
 import '@/styles/globals.css'
+import Providers from '@/lib/Providers'
 
 const onest = Onest({ subsets: ['latin'], display: 'swap' })
 const manrope = Manrope({ subsets: ['latin'], display: 'swap' })
@@ -11,10 +12,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${onest.variable} ${manrope.variable}`}>
-        {children}
-      </body>
-    </html>
+    <Providers>
+      <html lang="en">
+        <body className={`${onest.variable} ${manrope.variable}`}>
+          {children}
+        </body>
+      </html>
+    </Providers>
   )
 }

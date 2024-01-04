@@ -1,7 +1,17 @@
-import React from 'react'
+'use client';
+
+import React from 'react';
 import PrimaryButton from '@/components/element/button-items/PrimaryButton';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 const DetailsUpdateSuccessPage = () => {
+  const router = useRouter();
+  const handleSubmit = () => {
+
+    // before check all data is valid by backend api
+
+    router.push('/dashboard/overview')
+  };
   return (
     <div className='auth-form-screen box-shadow max-w-[460px] mx-auto mt-[89px] bg-uwc-white px-[38px] pt-9 pb-10 rounded-[15px] border border-accend-color-4'>
       <Image
@@ -22,9 +32,10 @@ const DetailsUpdateSuccessPage = () => {
       <PrimaryButton
         btnText='Proceed to Home'
         btnClasses='bg-accend-color mt-[28px]'
+        handleSubmit={handleSubmit}
       />
     </div>
   );
-}
+};
 
-export default DetailsUpdateSuccessPage
+export default DetailsUpdateSuccessPage;

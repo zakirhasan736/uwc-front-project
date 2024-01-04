@@ -5,6 +5,8 @@ const AccendInput = ({
   placeholder = '',
   inputType = '',
   inputClasses = '',
+  onChange,
+  name,
 }) => {
 
   return (
@@ -22,6 +24,8 @@ const AccendInput = ({
           type={inputType}
           className='form-input-field h-[45px] px-[22px] bg-[#F6F6F6] w-full border border-[#EDEDED] rounded-[10px] text-body-text text-left font-primary font-normal leading-none text-primary-color placeholder:text-accend-color-2 placeholder:font-primary placeholder:text-body-text py-4'
           placeholder={placeholder}
+          name={name}
+          onChange={onChange}
         />
        
       </div>
